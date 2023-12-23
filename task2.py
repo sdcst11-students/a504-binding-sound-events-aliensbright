@@ -17,6 +17,7 @@ win=tk.Tk()
 
 win.geometry('110x200')
 win.resizable(FALSE,FALSE)
+x=0
 
 button1=Button(win,width=6,text='1')
 button2=Button(win,width=6,text='2',)
@@ -40,15 +41,37 @@ question2=Label(text=' 46 + 47 - 3 x 2')
 but2=Button(text='=')
 answer2=Entry(width=5)
 
+question3=Label(text=' 2 x 27 - 3 x 12 ')
+but3=Button(text='=')
+answer3=Entry(width=5)
 
+def butans2(event):
+    global x
+    if answer2.get()=='87':
+        print('good job')
+        playsound('Noises/Meow.mp3',block=FALSE)
+        question2.destroy()
+        but2.destroy()
+        answer2.destroy()
+        x=x+1
+        print(x)
+    else:
+        playsound('Noises/horse.mp3',block=FALSE)
+        print('badjob')
+        question2.destroy()
+        but2.destroy()
+        answer2.destroy()
 
 def butans1(event):
+    global x
     if answer1.get()=='176':
         print('good job')
         playsound('Noises/Meow.mp3',block=FALSE)
         question1.destroy()
         but1.destroy()
         answer1.destroy()
+        x=x+1
+        print(x)
     else:
         playsound('Noises/horse.mp3',block=FALSE)
         print('badjob')
@@ -57,12 +80,28 @@ def butans1(event):
         answer1.destroy()
         
 
+def butans3(event):
+    global x
+    if answer3.get()=='18':
+        print('good job')
+        playsound('Noises/Meow.mp3',block=FALSE)
+        question3.destroy()
+        but3.destroy()
+        answer3.destroy()
+        x=x+1
+        print(x)
+    else:
+        playsound('Noises/horse.mp3',block=FALSE)
+        print('badjob')
+        question3.destroy()
+        but3.destroy()
+        answer3.destroy()
+
 def buttfun1(event):
     button1.destroy()
-    print(butList)
-    question1.place(x=0,y=155)
-    but1.     place(x=50,y=150)
-    answer1.  place(x=75,y=155)
+    question1.place(x=30,y=155)
+    but1.     place(x=30,y=175)
+    answer1.  place(x=50,y=180)
 
 def buttfun2(event):
     button2.destroy()
@@ -70,28 +109,20 @@ def buttfun2(event):
     but2.place(x=30,y=175)
     answer2.place(x=50,y=180)
 
+def buttfun3(event):
+    button3.destroy()
+    question3.place(x=10,y=155)
+    but3.place(x=30,y=175)
+    answer3.place(x=50,y=180)
 
-
-def butans2(event):
-    if answer2.get()=='87':
-        print('good job')
-        playsound('Noises/Meow.mp3',block=FALSE)
-        question2.destroy()
-        but2.destroy()
-        answer2.destroy()
-    else:
-        playsound('Noises/horse.mp3',block=FALSE)
-        print('badjob')
-        question2.destroy()
-        but2.destroy()
-        answer2.destroy()
-    
 
 
 button1.bind('<Button>',buttfun1)
 button2.bind('<Button>',buttfun2)
+button3.bind('<Button>',buttfun3)
 but1.bind('<Button>',butans1)
 but2.bind('<Button>',butans2)
+but3.bind('<Button>',butans3)
 
 for i in butList:
     i[0].place(y=i[2],x=i[1])
