@@ -49,14 +49,14 @@ def butans2(event):
     global x
     if answer2.get()=='87':
         print('good job')
-        playsound('Noises/Meow.mp3',block=FALSE)
+        playsound('Noises/Coin2.wav',block=FALSE)
         question2.destroy()
         but2.destroy()
         answer2.destroy()
         x=x+1
         print(x)
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
+        playsound('Noises/Loss.wav',block=FALSE)
         print('badjob')
         question2.destroy()
         but2.destroy()
@@ -66,14 +66,14 @@ def butans1(event):
     global x
     if answer1.get()=='176':
         print('good job')
-        playsound('Noises/Meow.mp3',block=FALSE)
+        playsound('Noises/Coin2.wav',block=FALSE)
         question1.destroy()
         but1.destroy()
         answer1.destroy()
         x=x+1
         print(x)
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
+        playsound('Noises/Loss.wav',block=FALSE)
         print('badjob')
         question1.destroy()
         but1.destroy()
@@ -84,14 +84,14 @@ def butans3(event):
     global x
     if answer3.get()=='18':
         print('good job')
-        playsound('Noises/Meow.mp3',block=FALSE)
+        playsound('Noises/Coin2.wav',block=FALSE)
         question3.destroy()
         but3.destroy()
         answer3.destroy()
         x=x+1
         print(x)
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
+        playsound('Noises/Loss.wav',block=FALSE)
         print('badjob')
         question3.destroy()
         but3.destroy()
