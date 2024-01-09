@@ -5,7 +5,7 @@ You will be graded based on the difficulty of the assignment:
 Easy : Computation questions
 Medium: Solving one step equations
 Hard: Factoring questions
-Keep score for the player and play appropriate sound effects when buttons are pressed
+Keep x for the player and play appropriate sound effects when buttons are pressed
 '''
 import tkinter as tk
 from tkinter import *
@@ -18,7 +18,7 @@ win=tk.Tk()
 win.geometry('110x200')
 win.resizable(FALSE,FALSE)
 
-score = 0
+x = 0
 
 button1=Button(win,width=6,text='1')
 button2=Button(win,width=6,text='2',)
@@ -41,6 +41,7 @@ answer1=Entry(width=5)
 question2=Label(text=' 46 + 47 - 3 x 2 ')
 but2=Button(text='=')
 answer2=Entry(width=5)
+
 
 question3=Label(text=' (5 + 22 / 2) / 2 ')
 but3=Button(text='=')
@@ -76,173 +77,172 @@ answer10=Entry(width=5)
 
 
 def butans1(event):
-    global score
+    global x
     if answer1.get()=='176':
-        score=score+1
-        print(score)
-        playsound('Noises/Meow.mp3',block=FALSE)
+        x=x+1
+        print(f'Score : {x}')
+        playsound('Noises/Coin2.wav',block=FALSE)
         question1.destroy()
         but1.destroy()
         answer1.destroy()
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
-        print('Incorrect')
+        playsound('Noises/Loss.wav',block=FALSE)
+        print(f'Incorrect. Score : {x}')
         question1.destroy()
         but1.destroy()
         answer1.destroy()
 
 def butans2(event):
-    global score
+    global x
     if answer2.get()=='87':
-        score=score+1
-        print(score)
-        playsound('Noises/Meow.mp3',block=FALSE)
+        x=x+1
+        print(f'Score : {x}')
+        playsound('Noises/Coin2.wav',block=FALSE)
         question2.destroy()
         but2.destroy()
         answer2.destroy()
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
-        print('Incorrect')
+        playsound('Noises/Loss.wav',block=FALSE)
+        print(f'Incorrect. Score : {x}')
         question2.destroy()
         but2.destroy()
         answer2.destroy()
 
 def butans3(event):
-    global score
-    if answer3.get()=='8':
-        score=score+1
-        print(score)
-        playsound('Noises/Meow.mp3',block=FALSE)
+    global x
+    if answer3.get()=='18':
+        x=x+1
+        print(f'Score : {x}')
+        playsound('Noises/Coin2.wav',block=FALSE)
         question3.destroy()
         but3.destroy()
         answer3.destroy()
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
-        print('Incorrect')
+        playsound('Noises/Loss.wav',block=FALSE)
+        print(f'Incorrect. Score : {x}')
         question3.destroy()
         but3.destroy()
         answer3.destroy()
 
 def butans4(event):
-    global score
+    global x
     if answer4.get()=='1':
-        score=score+1
-        print(score)
-        playsound('Noises/Meow.mp3',block=FALSE)
+        x=x+1
+        print(f'Score: {x}')
+        playsound('Noises/Coin2.wav',block=FALSE)
         question4.destroy()
         but4.destroy()
         answer4.destroy()
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
-        print('Incorrect')
+        playsound('Noises/Loss.wav',block=FALSE)
+        print(f'Incorrect. Score : {x}')
         question4.destroy()
         but4.destroy()
         answer4.destroy()
 
 def butans5(event):
-    global score
+    global x
     if answer5.get()=='5':
-        score=score+1
-        print(score)
-        playsound('Noises/Meow.mp3',block=FALSE)
+        x=x+1
+        print(f'Score : {x}')
+        playsound('Noises/Coin2.wav',block=FALSE)
         question5.destroy()
         but5.destroy()
         answer5.destroy()
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
-        print('Incorrect')
+        playsound('Noises/Loss.wav',block=FALSE)
+        print(f'Incorrect. Score : {x}')
         question5.destroy()
         but5.destroy()
         answer5.destroy()
 
 def butans6(event):
-    global score
+    global x
     if answer6.get()=='3.5':
-        score=score+1
-        print(score)
-        print('good job')
-        playsound('Noises/Meow.mp3',block=FALSE)
+        x=x+1
+        print('Score : {x}')
+        playsound('Noises/Coin2.wav',block=FALSE)
         question6.destroy()
         but6.destroy()
         answer6.destroy()
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
-        print('Incorrect')
+        playsound('Noises/Loss.wav',block=FALSE)
+        print(f'Incorrect. Score : {x}')
         question6.destroy()
         but6.destroy()
         answer6.destroy()
 
 def butans7(event):
-    global score
+    global x
     if answer7.get()=='120':
-        score=score+1
-        print(score)
-        playsound('Noises/Meow.mp3',block=FALSE)
+        x=x+1
+        print(f'Score : {x}')
+        playsound('Noises/Coin2.wav',block=FALSE)
         question7.destroy()
         but7.destroy()
         answer7.destroy()
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
-        print('Incorrect')
+        playsound('Noises/Loss.wav',block=FALSE)
+        print(f'Incorrect. Score : {x}')
         question7.destroy()
         but7.destroy()
         answer7.destroy()
 
 def butans8(event):
-    global score
+    global x
     if answer8.get()=='216':
-        score=score+1
-        print(score)
-        playsound('Noises/Meow.mp3',block=FALSE)
+        x=x+1
+        print(f'Score : {x}')
+        playsound('Noises/Coin2.wav',block=FALSE)
         question8.destroy()
         but8.destroy()
         answer8.destroy()
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
-        print('Incorrect')
+        playsound('Noises/Loss.wav',block=FALSE)
+        print(f'Incorrect. Score : {x}')
         question8.destroy()
         but8.destroy()
         answer8.destroy()
 
 def butans9(event):
-    global score
+    global x
     if answer9.get()=='6020':
-        score=score+1
-        print(score)
-        playsound('Noises/Meow.mp3',block=FALSE)
+        x=x+1
+        print(f'Score : {x}')
+        playsound('Noises/Coin2.wav',block=FALSE)
         question9.destroy()
         but9.destroy()
         answer9.destroy()
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
-        print('Incorrect')
+        playsound('Noises/Loss.wav',block=FALSE)
+        print(f'Incorrect. Score : {x}')
         question9.destroy()
         but9.destroy()
         answer9.destroy()
 
 def butans10(event):
-    global score
+    global x
     if answer10.get()=='4':
-        score=score+1
-        print(score)
-        playsound('Noises/Meow.mp3',block=FALSE)
+        x=x+1
+        print(f'Score : {x}')
+        playsound('Noises/Coin2.wav',block=FALSE)
         question10.destroy()
         but10.destroy()
         answer10.destroy()
     else:
-        playsound('Noises/horse.mp3',block=FALSE)
-        print('Incorrect')
+        playsound('Noises/Loss.wav',block=FALSE)
+        print(f'Incorrect. Score : {x}')
         question10.destroy()
         but10.destroy()
         answer10.destroy()
 
 
+
 def buttfun1(event):
     button1.destroy()
-    print(butList)
-    question1.place(x=0,y=155)
-    but1.     place(x=50,y=150)
-    answer1.  place(x=75,y=155)
+    question1.place(x=30,y=155)
+    but1.     place(x=30,y=175)
+    answer1.  place(x=50,y=180)
 
 def buttfun2(event):
     button2.destroy()
@@ -298,7 +298,6 @@ def buttfun10(event):
     but10.place(x=30,y=175)
     answer10.place(x=50,y=180)
 
-
 button1.bind('<Button>',buttfun1)
 button2.bind('<Button>',buttfun2)
 button3.bind('<Button>',buttfun3)
@@ -320,7 +319,6 @@ but7.bind('<Button>',butans7)
 but8.bind('<Button>',butans8)
 but9.bind('<Button>',butans9)
 but10.bind('<Button>',butans10)
-
 
 for i in butList:
     i[0].place(y=i[2],x=i[1])
